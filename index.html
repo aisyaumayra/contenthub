@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the world of digital content creation and access essential resources and news.">
+    <meta name="keywords" content="digital content creator, jobs, news, resources">
+    <meta name="author" content="ICM561 Group">
+    <title>Digital Content Creator Portal</title>
+    <style>
+    
+                .title {
+            font-size: 75px;
+            text-align: center; /* Centers the text */
+            color: #007bff; /* Example color; adjust as needed */
+            margin-top: 2rem; /* Adds some spacing at the top */
+        }
+
+        
+        /* General Reset */
+        body, h1, h2, p, ul, li, a, form, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header and Navigation */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background: #007bff;
+            color: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Intro Section */
+                .image-container {
+            width: 100% /* Allow the container to resize based on the image width */
+            height: 100% /* Allow the container to resize based on the image height */
+            margin: 20px 0; /* Add some spacing around the container */
+            overflow: hidden; /* Hide any overflow (if needed) */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Optional shadow */
+            text-align: center; /* Center-align the image horizontally */
+        }
+
+        .image-container img {
+            width: 100%; /* Keep the original width of the image */
+            height: ; /* Keep the original height of the image */
+            display: inline-block; /* Ensure proper alignment within the container */
+        }
+        
+        .intro-section {
+            background:background-image: url(header.jpg);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .intro-section h2 {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .intro-section p {
+            font-size: 1.2rem;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+         .search-bar {
+            text-align: center;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: background-image: url(header.jpg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visuals */
+        }
+
+
+        .search-bar form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .search-bar input {
+            padding: 0.8rem;
+            width: 300px;
+            border: 2px solid #007bff;
+            border-radius: 25px;
+            font-size: 1rem;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: #0056b3;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-bar button img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* News Section */
+        .news-section {
+            background: #f1f1f1;
+            padding: 2rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        .news-section h2 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .news-section p {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .news-articles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .news-article {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+
+        .news-article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .news-article h3 {
+            color: #007bff;
+        }
+
+        .news-article p {
+            color: #555;
+        }
+
+        .news-article a {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .news-article a:hover {
+            background: #0056b3;
+        }
+
+        /* Footer */
+        .custom-footer {
+            background-color: #0b132b;
+            color: #d9d9d9;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-family: Arial, sans-serif;
+        }
+
+        .newsletter h3 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: #d9d9d9;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter form {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .newsletter input {
+            padding: 0.5rem;
+            width: 250px;
+            border: 1px solid #3a506b;
+            border-radius: 4px;
+            background-color: #1c2541;
+            color: #d9d9d9;
+        }
+
+        .newsletter button {
+            background-color: #3a506b;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background-color: #1c2541;
+        }
+
+        .footer-logo img {
+            max-width: 50px;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-icons a {
+            margin: 0 0.5rem;
+            display: inline-block;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer-links a {
+            color: #7a9ebe;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo1.jpg" alt="Logo">
+            <h1>Content Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Archive</a></li>
+                <li><a href="skills.html">Skills & Requirements</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- Introductory Section -->
+    <div class="image-container">
+        <img src="header2.jpg" alt="Background Image">
+
+        <!-- Search Section -->
+    <div class="search-bar">
+        <form action="browse.html" method="get">
+        <form action="contact.html" method="get">
+        <form action="skills.html" method="get">
+        <form action="about.html" method="get">
+            <input type="text" name="search" placeholder="Browse archive" required>
+            <button type="submit">
+                <img src="searchbutton.jpg" alt="Search">
+            </button>
+        </form>
+    </div>
+
+      <div class="intro-section">
+        <h2>What is a Digital Content Creator?</h2>
+        <p>A Digital Content Creator is an individual who produces engaging and informative content for various digital platforms,
+            including social media, blogs, websites, and video-sharing platforms. They combine creativity, storytelling, and technical 
+            skills to craft content that informs, entertains, and inspires audiences. Digital Content Creators play a vital role in shaping 
+            online trends, building brand identity, and connecting with global audiences in meaningful ways.
+        </p>
+    </div>
+    </div>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <h2>Latest News About Digital Content Creators</h2>
+        <p>Stay updated with the latest trends, news, and insights in the world of digital content creation.</p>
+        <div class="news-articles">
+            <div class="news-article">
+                <img src="news1.jpg" alt="AI in Content Creation">
+                <h3>The Rise of AI in Content Creation</h3>
+                <p>Explore how AI tools are reshaping the way digital content is created and curated.</p>
+                <a href="https://quantilus.com/article/the-rise-of-ai-generated-content-in-media-how-ai-is-reshaping-the-information-landscape/" target="_blank">Read More</a>
+            </div>
+
+            <div class="news-article">
+                <img src="news2.jpeg" alt="Top Tools for Content Creators">
+                <h3>Top Content Creator Tools in 2025</h3>
+                <p>Discover the most popular tools every content creator should have in their arsenal.</p>
+                <a href="https://www.getblend.com/blog/10-best-ai-tools-to-use-for-content-creation/" target="_blank">Read More</a>
+            </div>
+
+            <div class="news-article">
+                <img src="news3.jpeg" alt="Monetizing Your Content">
+                <h3>Monetizing Your Content in 2025</h3>
+                <p>Learn how creators are leveraging new platforms to generate revenue from their content.</p>
+                <a href="https://www.mightynetworks.com/resources/content-monetization" target="_blank">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <footer class="custom-footer">
+    <img src="logo3.jpg" alt="Content Hub logo">
+    <div class="newsletter">
+        <h3>SIGN UP FOR OUR NEWSLETTER</h3>
+        <form>
+            <input type="email" placeholder="jlastname@example.com" required>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    <div class="footer-logo">
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="browse.html">Browse Archive</a>
+        <a href="index.html">Home</a>
+    </div>
+</footer>
+
+        <p>&copy; 2025 Content Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+

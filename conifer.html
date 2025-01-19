@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore HTTrack - a featured tool for digital preservation and web archiving.">
+    <meta name="keywords" content="HTTrack, web archive, digital tools, featured content">
+    <meta name="author" content="ICM561 Group">
+    <title>HTTrack - Featured Content</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: #007bff;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .card h2 {
+            margin-bottom: 0.5rem;
+            color: #007bff;
+        }
+
+        .card p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 1rem;
+            background: #007bff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .card a:hover {
+            background: #0056b3;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #007bff;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+.custom-footer {
+    background-color: #0b132b; /* Dark blue-black background */
+    color: #d9d9d9; /* Light gray text for better contrast */
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.newsletter h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #d9d9d9; /* Light gray for the heading */
+    margin-bottom: 1rem;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.newsletter input {
+    padding: 0.5rem;
+    width: 250px;
+    border: 1px solid #3a506b; /* Subtle border in lighter blue */
+    border-radius: 4px;
+    background-color: #1c2541; /* Blue-black background for input */
+    color: #d9d9d9; /* Light gray text */
+}
+
+.newsletter input::placeholder {
+    color: #7a9ebe; /* Placeholder text in light blue-gray */
+}
+
+.newsletter button {
+    background-color: #3a506b; /* Lighter blue for button */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #1c2541; /* Darker shade for hover effect */
+}
+
+.footer-logo img {
+    max-width: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+    color: #d9d9d9; /* Light gray text */
+    margin-top: 0.5rem;
+}
+
+.social-icons {
+    margin: 1.5rem 0;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0.8); /* Subtle filter for consistent tone */
+}
+
+.social-icons img:hover {
+    filter: brightness(1); /* Brighten on hover */
+}
+
+.footer-links {
+    margin-top: 1.5rem;
+}
+
+.footer-links a {
+    color: #7a9ebe; /* Light blue-gray links */
+    margin: 0 1rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white; /* Highlighted white text on hover */
+    text-decoration: underline;
+}
+
+.custom-footer p {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #7a9ebe; /* Subtle text color */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Archive</a></li>
+                <li><a href="skills.html">Skills & Requirement</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Explore More Resources</h2>
+            <p>Discover additional tools, features, and tutorials related to HTTrack and web archiving.</p>
+        </section>
+
+        <section class="card-container">
+        
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="dcc1.jpg" alt="Getting Started">
+                <h2>Digital Content Creator</h2>
+                <p>Archived successfully by 1 minute 13 seconds with 5801833 bytes and 67 files</p>
+                <a href="https://www.reed.co.uk/company-profile/diamond-search-recruitment-ltd-48815" target="_blank">Learn More</a>
+                <a href="https://drive.google.com/drive/folders/1NW3MfvsojQ0uyRpE4kk_5eygdLSDfdL7" target="_blank">Learn More</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="dcc2.jpg" alt="Advanced Features">
+                <h2>Digital Marketing Lead</h2>
+                <p>Archived successfully by 1 minute 13 seconds with 5801833 bytes and 67 files</p>
+                <a href="https://www.themuse.com/jobs/designit/digital-marketing-lead-remote" target="_blank">Learn More</a>
+                <a href="https://drive.google.com/drive/folders/1NW3MfvsojQ0uyRpE4kk_5eygdLSDfdL7" target="_blank">Learn More</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="dcc3.jpeg" alt="Case Studies">
+                <h2>Job Description Content Creator</h2>
+                <p>Archived successfully by 41 seconds with 2704375 bytes, 58 links and 52 files.</p> 
+                <a href="https://www.saas-hackers.com/job-descriptions/content-creator"target="_blank">Learn More</a>
+                <a href="https://drive.google.com/drive/folders/1NW3MfvsojQ0uyRpE4kk_5eygdLSDfdL7" target="_blank">Learn More</a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="dcc4.jpeg" alt="Troubleshooting">
+                <h2>What is a digital creator?</h2>
+                <p>Archived successfully by 20 seconds with 2704375 bytes, 36 links and 52 files</p>
+                <a href="https://memberful.com/blog/digital-creator/"target="_blank">Learn More</a>
+                <a href="https://drive.google.com/drive/folders/1NW3MfvsojQ0uyRpE4kk_5eygdLSDfdL7" target="_blank">Learn More</a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="dcc5.jpeg" alt="FAQs">
+                <h2>Content Creator</h2>
+                <p>Archived successfully by 12 seconds with 1631676 bytes and 27 files.</p>
+                <a href="https://www.themuse.com/jobs/vaynermedia/content-creator-c498d7">Learn More</a>
+                <a href="https://drive.google.com/drive/folders/1NW3MfvsojQ0uyRpE4kk_5eygdLSDfdL7" target="_blank">Learn More</a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="dcc6.jpeg" alt="Additional Resources">
+                <h2>Social Media Content Creator</h2>
+                <p>Archived successfully by 21 seconds with 1583130 bytes, 44 links and 36 files.</p>
+                <a href="https://artisantalent.com/job-descriptions/social-media-content-creator-job-description/"target="_blank">Learn More</a>
+                <a href="https://drive.google.com/drive/folders/1NW3MfvsojQ0uyRpE4kk_5eygdLSDfdL7" target="_blank">Learn More</a>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card">
+                <img src="dcc7.jpeg" alt="Troubleshooting">
+                <h2>Digital Content Creation: What It Is & How to Do It Successfully</h2>
+                <p>Archived successfully by 44 seconds with 2191051 bytes, 42 links and 36 files</p>
+                <a href="https://ahrefs.com/blog/digital-content-creation/"target="_blank">Learn More</a>
+                <a href="https://drive.google.com/drive/folders/1NW3MfvsojQ0uyRpE4kk_5eygdLSDfdL7" target="_blank">Learn More</a>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card">
+                <img src="dcc8.jpeg" alt="FAQs">
+                <h2>What Is Digital Content Creation? How to Do It Well</h2>
+                <p>Archived successfully by 1 minute 16 seconds with 5222371 bytes, 46 links and 36 files</p>
+                <a href="https://www.semrush.com/blog/digital-content-creation/?g_network=g&g_keyword=&g_acctid=633-384-9840&g_campaign=AA_SRCH_DSA_Blog_EN&g_keywordid=dsa-2228200449078&g_adtype=search&g_adid=676513944447&g_campaignid=18361936995&g_adgroupid=162954369508&kw=&cmp=AA_SRCH_DSA_Blog_EN&label=dsa_pagefeed&Network=g&Device=c&utm_content=676513944447&kwid=dsa-2228200449078&cmpid=18361936995&agpid=162954369508&BU=Core&extid=105279941278&adpos=&gad_source=1&gclid=EAIaIQobChMI4pqp35SBiwMVDKRmAh3k9THIEAAYBCAAEgL-4vD_BwE">Learn More</a>
+                <a href="https://drive.google.com/drive/folders/1NW3MfvsojQ0uyRpE4kk_5eygdLSDfdL7" target="_blank">Learn More</a>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="card">
+                <img src="dcc9.jpeg" alt="Additional Resources">
+                <h2>Social Media Content Creator</h2>
+                <p>Archived successfully by 1 minute 29 seconds with 22690603 bytes, 93 links and 89 files</p>
+                <a href="https://foothillschurch.com/job-digital-content-creator/"
+                target="_blank">Learn More</a>
+                <a href="https://drive.google.com/drive/folders/1NW3MfvsojQ0uyRpE4kk_5eygdLSDfdL7" target="_blank">Learn More</a>
+            </div>
+        </section>
+    </main>
+        </section>
+    </main>
+
+<footer class="custom-footer">
+    <img src="logo3.jpg" alt="Content Hub logo">
+    <div class="newsletter">
+        <h3>SIGN UP FOR OUR NEWSLETTER</h3>
+        <form>
+            <input type="email" placeholder="jlastname@example.com" required>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="browse.html">Browse Archive</a>
+        <a href="index.html">Home</a>
+    </div>
+    <p>&copy; 2025 Content Hub. All rights reserved.</p>
+</footer>
+
+
+        <p>&copy; 2025 Content Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+</body>
+</html>
